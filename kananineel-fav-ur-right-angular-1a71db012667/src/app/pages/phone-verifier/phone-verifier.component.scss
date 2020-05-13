@@ -1,0 +1,16 @@
+.button-fill{
+  width: 40%;
+  background-color: #e7f5f4!important;
+  color: #013135!important;
+  border-radius: 20px;
+}
+
+@media (max-width: 425px) {
+  .button-fill{
+    width: 70%;
+    background-color: #e7f5f4!important;
+    color: #013135!important;
+    border-radius: 20px;
+  }
+
+}

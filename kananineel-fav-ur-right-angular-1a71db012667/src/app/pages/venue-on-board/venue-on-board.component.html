@@ -1,0 +1,271 @@
+<div class="header bg-main pb-8 pt-5 pt-md-8">
+
+</div>
+
+
+<div class="container mt--7 mb-4">
+  <div class="row">
+    <div class="col-xl-12 order-xl-6 mb-5 mb-xl-0">
+      <div class="card card-profile shadow">
+        <div class="card-body pt-0 pt-md-4">
+          <div class="row">
+            <div class="col">
+              <div class="card-profile-stats d-flex justify-content-center mt-md-3">
+                <form #ribbonForm="ngForm">
+                  <!-- <h6 class="heading-small text-muted mb-4">User information</h6> -->
+                  <div class="pl-lg-4">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label class="form-control-label" for="input-username">Venue Name</label>
+                          <input type="text" id="venue" name="venuewName" #venuewName = "ngModel" [(ngModel)] = "obj.venuewName" class="form-control form-control-alternative" placeholder="VENUE NAME">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label class="form-control-label" for="adminName">Admin Name</label>
+                          <input
+                          name="adminName" #adminName = "ngModel" [(ngModel)] = "obj.adminname"
+                          type="text" id="adminName" class="form-control form-control-alternative" placeholder="ADMIN NAME">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label class="form-control-label" for="adminEmail">E-mail</label>
+                          <input name="adminEmail" #adminEmail = "ngModel" [(ngModel)] = "obj.adminEmail" type="email" id="adminEmail" class="form-control form-control-alternative" placeholder="EMAIL">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label class="form-control-label" for="Address">Address</label>
+                          <textarea name="Address" #Address="ngModel" [(ngModel)]="obj.address" id="Address" class="form-control form-control-alternative" placeholder="ADDRESS"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label class="form-control-label" for="country">COUNTRY</label>
+                          <input type="text" name="country" #country="ngModel" [(ngModel)]="obj.country" id="country" class="form-control form-control-alternative" placeholder="COUNTRY">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="state">STATE</label>
+                          <input type="text"  name="state" #state="ngModel" [(ngModel)]="obj.state"  id="state" class="form-control form-control-alternative" placeholder="e.g: Maharashtra">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="city">CITY</label>
+                          <input type="text" name="city" #city="ngModel" [(ngModel)]="obj.city" id="city" class="form-control form-control-alternative" placeholder="e.g: Mumbai">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="pincode">PINCODE</label>
+                          <input type="number" name="pincode" #pincode="ngModel" [(ngModel)]="obj.pincode" id="pincode" class="form-control form-control-alternative" placeholder="pincode">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="area">AREA</label>
+                          <input type="text" name="area" #area="ngModel" [(ngModel)]="obj.area" id="area" class="form-control form-control-alternative" placeholder="pincode">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="form-control-label" for="logo">SELECT LOGO</label>
+                           <div class="input-group mb-3">
+                            <input
+                              ngModel
+                              name="logo"
+                              #logo="ngModel"
+                              type="file"
+                              class="form-control"
+                              required
+                              (change)="attachFiles($event)"
+                              id="files" class="fileInput">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4><b>BANK DETAILS</b></h4>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <label class="form-control-label" for="accountholder">ACCOUNT HOLDER NAME</label>
+                            <input type="text" name="accountholder" #accountholder="ngModel" [(ngModel)]="obj.accountholder" id="accountholder" class="form-control form-control-alternative" placeholder="YOUR FULL NAME">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <label class="form-control-label" for="accountNumber">ACCOUNT NUMBER</label>
+                            <input type="number" name="accountNumber" #accountNumber="ngModel" [(ngModel)]="obj.accountNumber" id="accountNumber" class="form-control form-control-alternative" placeholder="YOUR FULL NAME">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label class="form-control-label" for="gst">GST NUMBER</label>
+                            <input type="number" name="gst" #gst="ngModel" [(ngModel)]="obj.gst" id="gst" class="form-control form-control-alternative" placeholder="">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label class="form-control-label" for="ifsc">IFSC CODE</label>
+                            <input type="text" name="ifsc" #ifsc="ngModel" [(ngModel)]="obj.ifsc" id="ifsc" class="form-control form-control-alternative" placeholder="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label class="form-control-label" for="discount">DISCOUNT</label>
+                            <input type="number" name="discount" #discount="ngModel" [(ngModel)]="obj.discount" id="discount" class="form-control form-control-alternative" placeholder="">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label class="form-control-label" for="commission">COMMISSION</label>
+                            <input type="text" name="commission" #commission="ngModel" [(ngModel)]="obj.commission" id="commission" class="form-control form-control-alternative" placeholder="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="Latitude">Latitude</label>
+                          <input type="number" name="Latitude" #Latitude="ngModel" [(ngModel)]="obj.Latitude" id="Latitude" class="form-control form-control-alternative" placeholder="" >
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="Longitude">Longitude</label>
+                          <input type="number" name="Longitude" #Longitude="ngModel" [(ngModel)]="obj.Longitude" id="Longitude" class="form-control form-control-alternative" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="contactNumber">Contact Number</label>
+                          <input type="number" id="contactNumber" name="contactNumber" #contactNumber="ngModel" [(ngModel)]="obj.contactNumber" class="form-control form-control-alternative" placeholder="" >
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="zomatoId">Zomato Id</label>
+                          <input type="number" id="zomatoId"  name="zomatoId" #zomatoId="ngModel" [(ngModel)]="obj.zomatoId" class="form-control form-control-alternative" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                         <div class="form-group" style="display: flex;">
+                          <span><b>GIFT ENABLED:</b></span>&nbsp;
+                          <label class="text-center smallSwitch">
+                            <!-- <span class="ON">YES&nbsp;&nbsp;</span> -->
+                            <!-- [(ngModel)] = "Ribbon_data.is_active" (ngModelChange)="onOffRibbon($event,Ribbon_data)" -->
+                              <input name="giftEnabled" type="checkbox" id="giftEnabled" #giftEnabled="ngModel" [(ngModel)]="obj.giftEnabled" value="1">
+                            <span class="smallslider smallround"></span>
+                            <!-- <span class="OFF">NO</span> -->
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group" style="display: flex;">
+                          <span><b>DONATION ENABLED:</b></span>&nbsp;
+                          <label class="text-center smallSwitch">
+                            <!-- <span class="ON">YES&nbsp;&nbsp;</span> -->
+                            <!-- [(ngModel)] = "Ribbon_data.is_active" (ngModelChange)="onOffRibbon($event,Ribbon_data)" -->
+                              <input name="donationEnabled" type="checkbox" id="donationEnabled" #donationEnabled="ngModel" [(ngModel)]="obj.donationEnabled" value="1">
+                            <span class="smallslider smallround"></span>
+                            <!-- <span class="OFF">NO</span> -->
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                         <div class="form-group" style="display: flex;">
+                          <span><b>IS ENABLED:</b></span>&nbsp;
+                          <label class="text-center smallSwitch">
+                            <!-- <span class="ON">YES&nbsp;&nbsp;</span> -->
+                            <!-- [(ngModel)] = "Ribbon_data.is_active" (ngModelChange)="onOffRibbon($event,Ribbon_data)" -->
+                              <input name="isEnabled" type="checkbox" id="isEnabled" #isEnabled="ngModel" [(ngModel)]="obj.isEnabled" value="1" >
+                            <span class="smallslider smallround"></span>
+                            <!-- <span class="OFF">NO</span> -->
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                      <!--   <div class="form-group" style="display: flex;">
+                          <span><b>DONATION ENABLED:</b></span>&nbsp;
+                          <label class="text-center smallSwitch">
+                            <span class="ON">YES&nbsp;&nbsp;</span>
+                             [(ngModel)] = "Ribbon_data.is_active" (ngModelChange)="onOffRibbon($event,Ribbon_data)"
+                              <input name="active" type="checkbox" >
+                            <span class="smallslider smallround"></span>
+                            <span class="OFF">NO</span>
+                          </label>
+                        </div> -->
+                      </div>
+                    </div>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary button-fill" (click)="Addvenue()">SAVE VENUE</button>
+                    </div>
+                  </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #success>
+  <h2 matDialogTitle>Add User</h2>
+  <p matDialogContent>User Added Successfully!</p>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose="confirm" class="btn btn-success">OK</button>
+  </mat-dialog-actions>
+</ng-template>
+
+<ng-template #failure>
+  <h2 matDialogTitle>Add User</h2>
+  <p matDialogContent>Error!</p>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose="confirm" class="btn btn-danger">OK</button>
+  </mat-dialog-actions>
+</ng-template>

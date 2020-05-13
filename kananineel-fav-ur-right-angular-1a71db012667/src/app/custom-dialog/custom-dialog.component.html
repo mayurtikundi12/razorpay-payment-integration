@@ -1,0 +1,26 @@
+<div class="tag-dialog-card">
+  <div class="main">
+    <div class="dialog-header">
+      <!-- {{dialogText.headerBgClass}} -->
+      <div class="">
+        <div class="popup-image tag-icon {{dialogText.headerIcon}}"></div>
+      </div>
+    </div>
+    <div class="dialog-content">
+      <div class="align-content">
+        <p class="title-text">{{dialogText.title}}</p>
+        <p class="supporting-text">{{dialogText.description}}</p>
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <div class="text-center align-footer" *ngIf="!dialogText.isInfoDialog">
+          <button mat-button class="cancel-buttons" (click)="dialogRef.close(0)">No</button>&nbsp;
+          <button mat-button class="submit-buttons" (click)="dialogRef.close(1)">Yes</button>
+      </div>
+      <div class="text-center" *ngIf="dialogText.isInfoDialog">
+        <button mat-button class="submit-buttons" (click)="dialogRef.close(1)">OK</button>
+      </div>
+    </div>
+  </div>
+
+</div>

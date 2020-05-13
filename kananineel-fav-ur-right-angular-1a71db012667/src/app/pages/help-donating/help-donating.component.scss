@@ -1,0 +1,33 @@
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.button-fill{
+  width: 40%;
+  background-color: #e7f5f4!important;
+  color: #013135!important;
+  border-radius: 20px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.bg-main{
+  background-color: #013135;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: #013135;
+}
+
+.classes{
+  line-height: 55px;
+}
+
+@media (max-width: 768px){
+ .addMargin{
+   margin-top: 40px;
+ }
+}

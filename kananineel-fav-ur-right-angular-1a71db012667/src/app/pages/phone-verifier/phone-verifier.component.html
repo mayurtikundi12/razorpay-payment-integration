@@ -1,0 +1,56 @@
+<div class="header bg-main pb-8 pt-5 pt-md-8">
+
+</div>
+
+<div class="container mt--7 mb-4">
+    <div class="row">
+      <div class="col-xl-12 order-xl-6 mb-5 mb-xl-0">
+        <div class="card card-profile shadow">
+          <div class="card-body pt-0 pt-md-4">
+
+            <div [hidden]="user">
+              <div class="text-center">
+                <h2>Sign-in with Phone Number</h2>
+              </div>
+
+
+              <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                  <div class="form-group">
+                    <label class="form-control-label" for="phone">Phone Number</label><br>
+                    <input type="text" [(ngModel)]="phoneNumber.number" class="form-control form-control-alternative" placeholder="phone number here"  maxlength="10">
+                  </div>
+                  <div class="form-group text-center">
+                    <div  id="recaptcha-container" class="text-center"></div>
+                  </div>
+                  <div class="text-center">
+                    <button class="btn-primary button-fill " [disabled]="!showVerification" (click)="sendLoginCode()">Get Otp</button>
+                  </div>
+
+                  <div>
+                    <div class="form-group mt-3">
+                      <label for="code" class="form-control-label">Enter your Verification Code Here</label><br>
+                      <input class="form-control form-control-alternative" type="text" name="code" [(ngModel)]="verificationCode" placeholder="* * * * * *">
+                       <p *ngIf="is_otp_incorrect" >Error incorrect PIN</p>
+                    </div>
+                    <div class="text-center">
+                      <button class="btn-primary button-fill" (click)="verifyLoginCode()">Verify</button>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+                <!-- <input type="text" [(ngModel)]="phoneNumber.country"  class="input" value="91"    maxlength="2"> -->
+              </div>
+              </div>
+
+
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+

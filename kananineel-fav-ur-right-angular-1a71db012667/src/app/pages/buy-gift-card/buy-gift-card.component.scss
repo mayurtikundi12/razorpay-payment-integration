@@ -1,0 +1,71 @@
+.button-fill{
+  width: 40%;
+  background-color: #e7f5f4!important;
+  color: #013135!important;
+  border-radius: 20px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.bg-main{
+  background-color: #013135;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: #013135;
+}
+
+.classes{
+  line-height: 55px;
+}
+
+@media (max-width: 768px){
+ .addMargin{
+   margin-top: 40px;
+ }
+}
+
+/* New css added 12:13pm */
+.images{
+  margin-top: 70px;
+}
+
+
+
+.header{
+  height: 450px;
+}
+
+.customcss{
+  margin-top: -22rem !important;
+}
+
+.sideborder{
+  border-right: 1px solid black;
+}
+@media( min-width: 770px){
+  .showClass{
+    display: none;
+  }
+
+  .footer-text{
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 770px){
+  .hideclass{
+    display: none;
+  }
+  .sideborder{
+    border: none;
+  }
+
+  .footer-text{
+    margin-top: 10px;
+  }
+ }
+

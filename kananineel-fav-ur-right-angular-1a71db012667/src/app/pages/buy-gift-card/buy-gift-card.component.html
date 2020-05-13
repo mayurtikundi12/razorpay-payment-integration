@@ -1,0 +1,246 @@
+<div class="header bg-main pb-8 pt-5 pt-md-5">
+
+</div>
+
+<!-- <div class="container mt--7 mb-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="heading text-center">
+        <h2>Give the Perfect Gift</h2>
+        <span>
+          <h4>Send a gift instantly in any amount you choose</h4>
+        </span>
+      </div>
+
+      <form>
+        <- <h6 class="heading-small text-muted mb-4">User information</h6>
+        <div class="pl-lg-4 container">
+          <div class="row addMargin">
+            <div class="col-lg-12 text-center">
+              <div class="form-group">
+                <div class="image">
+                  <img src="../../../assets/img/images/3.jpg" alt="" height="150px" width="250px">
+                </div>
+                <div class="text-left">
+                  <label class="form-control-label text-left">EGIFT CARD AMOUNT</label>
+                </div>
+
+                    <mat-radio-group [(ngModel)]="obj.radioValue" name="radioValue">
+                      <div class="row text-left">
+                        <div class="col classes">
+                          <mat-radio-button value="500" checked>₹500</mat-radio-button>
+                        </div>
+                        <div class="col classes">
+                          <mat-radio-button value="1000">₹1000</mat-radio-button>
+                        </div>
+                        <div class="col classes">
+                          <mat-radio-button value="2500">₹2500</mat-radio-button>
+                        </div>
+                        <div class="col classes">
+                          <mat-radio-button value="5000">₹5000</mat-radio-button>
+                        </div>
+                        <div class="col">
+                          <mat-radio-button [value]="customCard">
+                            <mat-form-field>
+                              <input matInput
+                              id="ecard"
+                              type="number"
+                              name="ecard"
+                              [(ngModel)]="obj.radioValueCustom"
+                              placeholder="Custom Amount ₹"/>
+                            </mat-form-field>
+                          </mat-radio-button>
+                        </div>
+
+                      </div>
+                        </mat-radio-group>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="receipient_name">RECEIPIENT NAME</label>
+                <input type="text" id="receipient_name" name="receipient_name" #receipient_name='ngModel'
+                [(ngModel)]="obj.receipient_name" class="form-control form-control-alternative" placeholder="RECEIPIENT NAME" >
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="receipient_email">RECEIPIENT EMAIL</label>
+                <input type="email" id="receipient_email" name="receipient_email" #receipient_email='ngModel'
+                [(ngModel)]="obj.receipient_email" class="form-control form-control-alternative" placeholder="RECEIPIENT EMAIL">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="your_name">YOUR NAME</label>
+                <input type="text" id="your_name"  name="your_name" #your_name='ngModel'
+                [(ngModel)]="obj.your_name" class="form-control form-control-alternative" placeholder="YOUR NAME" value="Lucky">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-last-name">YOUR EMAIL</label>
+                <input type="email" id="your_email" name="your_email" #your_email='ngModel'
+                [(ngModel)]="obj.your_email" class="form-control form-control-alternative" placeholder="YOUR EMAIL" value="Jesse">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <button class="btn btn-primary button-fill" (click)="Procedure()">Continue</button>
+            </div>
+
+
+        </div>
+
+        <div class="text-center mt-3">
+          <h5>Your money is safe with us. The money will tranfer to the partner once<br>
+          establishment is in operation and redeem the coupon with validity period.</h5>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div class="container customcss mt-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-5 col-sm-12 col-xs-12 sideborder">
+          <div class="heading text-center">
+            <h1>Give the Perfect Gift</h1>
+            <h5>Send a gift instantly in any amount you choose</h5>
+          </div>
+          <div class="image text-center mb-3" *ngIf="outletDetail">
+            <h3>{{ outletDetail.business_name }}</h3>
+            <img class="img img-responsive images" src="{{ outletDetail.logo.location }}" alt=" outletDetail.logo.location" height="150px" width="250px">
+
+          </div>
+          <div class="footer-text text-justify text-center hideclass">
+            <h5>Your money is safe with us. The money will <br>tranfer to the partner once
+              establishment<br> is in operation and redeem the coupon within<br> validity period.</h5>
+          </div>
+        </div>
+        <div class="col-lg-7 col-sm-12 col-xs-12">
+          <div class="heading">
+            <h1>Gift Card Amount</h1>
+          </div>
+              <div class="form-group">
+                <div class="text-left">
+                  <label class="form-control-label text-left">EGIFT CARD AMOUNT</label>
+                </div>
+                <form #fa (submit)="Procedure(fa.value)">
+                    <mat-radio-group [(ngModel)]="obj.radioValue" name="radioValue" >
+                      <div class="row text-left">
+                        <div class="col classes">
+                          <mat-radio-button value="500" [checked]= "true" (change)="call($event)">₹500</mat-radio-button>
+                        </div>
+                        <div class="col classes">
+                          <mat-radio-button value="1000" (change)="call($event)">₹1000</mat-radio-button>
+                        </div>
+                        <div class="col classes">
+                          <mat-radio-button value="2500" (change)="call($event)">₹2500</mat-radio-button>
+                        </div>
+                        <div class="col classes">
+                          <mat-radio-button value="5000" (change)="call($event)">₹5000</mat-radio-button>
+                        </div>
+                        <div class="col">
+                          <mat-radio-button [value]="customCard" >
+                            <mat-form-field>
+                              <input matInput
+                              (keyup)="apply($event)"
+                              id="ecard"
+                              type="number"
+                              name="ecard"
+                              [(ngModel)]="obj.radioValueCustom"
+                              placeholder="Custom Amount ₹"/>
+                            </mat-form-field>
+                          </mat-radio-button>
+                        </div>
+
+                      </div>
+                  </mat-radio-group>
+
+                  <div class="row">
+                    <div class="col">
+                      <h3 *ngIf="discounted_value">You Pay: {{ discounted_value }}</h3>
+                    </div>
+                    <div class="col">
+                      <h3>Discount: {{ outletDetail.discount }} %</h3>
+                    </div>
+                  </div>
+
+                  <!-- Text Boxes -->
+
+
+                      <div class="form-group">
+                        <label class="form-control-label" for="receipient_name">RECEIPIENT NAME</label>
+                        <input type="text" id="receipient_name" name="reciepient_name" #reciepient_name='ngModel'
+                        [(ngModel)]="obj.reciepient_name" class="form-control form-control-alternative" placeholder="RECEIPIENT NAME" >
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-control-label" for="receipient_email">RECEIPIENT EMAIL</label>
+                        <input type="email" id="receipient_email" name="reciepient_email" #reciepient_email='ngModel'
+                        [(ngModel)]="obj.reciepient_email" class="form-control form-control-alternative" placeholder="RECEIPIENT EMAIL">
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="form-control-label" for="your_name">YOUR NAME</label>
+                        <input type="text" id="your_name"  name="your_name" #your_name='ngModel'
+                        [(ngModel)]="obj.your_name" class="form-control form-control-alternative" placeholder="YOUR NAME" value="Lucky">
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">YOUR EMAIL</label>
+                        <input type="email" id="your_email" name="your_email" #your_email='ngModel'
+                        [(ngModel)]="obj.your_email" class="form-control form-control-alternative" placeholder="YOUR EMAIL" value="Jesse">
+                      </div>
+
+
+
+                    <div class=" text-center">
+                      <button class="btn btn-primary button-fill" (click)="Procedure($event)">Checkout</button>
+                    </div>
+                  </form>
+
+                  <div class="footer-text text-justify text-center showClass">
+                    <h5>Your money is safe with us. The money will <br>tranfer to the partner once
+                      establishment<br> is in operation and redeem the coupon within<br> validity period.</h5>
+                  </div>
+              </div>
+            </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<ng-template #success>
+  <h2 matDialogTitle>CONTACT DETAILS</h2>
+  <mat-dialog-content>
+    <input matInput
+    placeholder="Mobile Number"
+    class="form-control form-control-alternative"
+    type="tel"
+    name="mobile"/><br>
+    <button class="btn btn-classic">GET OTP</button>
+    <br>
+    <input matInput
+    placeholder="OTP"
+    class="form-control form-control-alternative"
+    type="tel" name="otp"/>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose="confirm" class="btn btn-success">OK</button>
+  </mat-dialog-actions>
+</ng-template>

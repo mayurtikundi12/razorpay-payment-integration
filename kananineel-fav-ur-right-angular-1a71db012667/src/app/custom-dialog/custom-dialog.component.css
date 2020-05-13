@@ -1,0 +1,30 @@
+button {
+  background: none;
+  padding: 5px 5px;
+  width: 30%;
+  text-align: center;
+  outline: none;
+  border-style: none;
+}
+button:focus,button:active {
+  border-style: none;
+  outline: none;
+}
+
+.submit-buttons{
+background-color: #28a745;
+color: white;
+cursor: pointer;
+}
+
+.cancel-buttons{
+background-color: #eb2222;
+color: white;
+cursor: pointer;
+}
+
+.main{
+width: 382px;
+margin: auto;
+margin-top: 14px;
+}

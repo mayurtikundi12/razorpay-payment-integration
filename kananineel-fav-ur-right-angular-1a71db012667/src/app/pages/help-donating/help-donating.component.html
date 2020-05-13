@@ -1,0 +1,95 @@
+<div class="header bg-main pb-8 pt-5 pt-md-8">
+
+</div>
+
+<div class="container mt--7 mb-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="heading text-center">
+        <h2>Give the Perfect Gift</h2>
+        <span>
+          <h4>Send a gift instantly in any amount you choose</h4>
+        </span>
+      </div>
+
+      <form>
+        <!-- <h6 class="heading-small text-muted mb-4">User information</h6> -->
+        <div class="pl-lg-4 container">
+          <div class="row addMargin">
+            <div class="col-lg-12 text-center">
+              <div class="form-group">
+                <div class="image">
+                  <img src="../../../assets/img/images/3.jpg" alt="" height="150px" width="250px">
+                </div>
+                <div class="text-left">
+                  <label class="form-control-label text-left">DONATION AMOUNT</label>
+                </div>
+
+                <mat-radio-group [(ngModel)]="obj.radioValue" name="radioValue">
+                  <div class="row text-left">
+                    <div class="col classes">
+                      <mat-radio-button value="5000" [checked]= "true" (change)="call($event)">₹5000</mat-radio-button>
+                    </div>
+                    <div class="col classes">
+                      <mat-radio-button value="10000" (change)="call($event)">₹10000</mat-radio-button>
+                    </div>
+                    <div class="col">
+                      <mat-radio-button [value]="customCard">
+                        <mat-form-field>
+                          <input matInput
+                          id="ecard"
+                          type="number"
+                          name="ecard"
+                          (keyup)="apply($event)"
+                          [(ngModel)]="obj.radioValueCustom"
+                          placeholder="Custom Amount ₹"/>
+                        </mat-form-field>
+                      </mat-radio-button>
+                    </div>
+                  </div>
+                </mat-radio-group>
+                <div class="row">
+                  <div class="col">
+                    <h1 *ngIf="discounted_value">{{ discounted_value }}</h1>
+                  </div>
+                  <div class="col">
+                    <h3>Discount: {{ outletDetail.discount }} %</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="your_name">YOUR NAME</label>
+                <input type="text" id="your_name"  name="your_name" #your_name='ngModel'
+                [(ngModel)]="obj.your_name" class="form-control form-control-alternative" placeholder="YOUR NAME" value="Lucky">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-last-name">YOUR EMAIL</label>
+                <input type="email" id="your_email" name="your_email" #your_email='ngModel'
+                [(ngModel)]="obj.your_email" class="form-control form-control-alternative" placeholder="YOUR EMAIL" value="Jesse">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <button class="btn btn-primary button-fill" (click)="Procedure()">Continue</button>
+            </div>
+
+
+        </div>
+
+        <div class="text-center mt-3">
+          <h5>Thank you for the wonderful gesture.</h5>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+

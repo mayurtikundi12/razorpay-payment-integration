@@ -1,0 +1,282 @@
+.card-header{
+  position: relative;
+}
+
+.imageCss {
+  position: absolute;
+  bottom: 0px;
+  // left: 101px;
+  left: 45px;
+  height: 100px;
+  width: 152px;
+  // border-color: #013135;
+  // border: 1px solid #013135;
+}
+
+.imageCssIcon{
+  height: 70px;
+  width: 70px;
+  bottom: 46px;
+  left: 87px;
+}
+
+.card-header{
+  border-bottom: none;
+}
+
+.card{
+  border-color: #013135;
+}
+// .card-body{
+//   margin-top: 36px;
+// }
+
+.addMargin{
+  margin-bottom: 44px;
+}
+
+.BuyButton{
+  border-radius: 20px;
+}
+
+.giftcardcolor{
+  background-color: #e7f5f4!important;
+  color: #013135!important;
+}
+
+.donateButton{
+  background-color: #e7f5f4!important;
+  color: #013135!important
+}
+
+.colors h1, .colors h3{
+  color: white;
+}
+
+.bg-main{
+  background-color: #013135;
+  margin-bottom: 10px;
+}
+
+.searchfilter{
+  margin-bottom: 55px;
+}
+
+.sn{
+  left: 112px;
+  position: absolute;
+  top: 128px;
+}
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/*
+Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 83px;
+    height: 100px;
+    width: 152px;
+  }
+
+.colors h1 {
+  font-size: 15px;
+}
+
+.colors h3 {
+  font-size: 12px;
+}
+
+.container {
+  margin-bottom: 45px;
+}
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width: 772px){
+
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 83px;
+    height: 100px;
+    width: 152px;
+  }
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 45px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+
+@media (min-width: 1022px) and (max-width: 1030px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 148px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 335px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 45px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 500px){
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 109px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (min-width: 355px) and (max-width: 361px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 67px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 380px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 70px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (min-width: 411px ) and (max-width: 413px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 91px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (min-width: 414px ) and (max-width: 420px) {
+  .card-header{
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    // left: 101px;
+    left: 92px;
+    height: 100px;
+    width: 152px;
+  }
+}
+
+@media (max-width: 768px){
+  .colors h1 {
+    font-size: 15px;
+  }
+
+  .colors h3 {
+    font-size: 12px;
+  }
+
+  .container {
+    margin-bottom: 45px;
+  }
+}

@@ -1,0 +1,36 @@
+.flexDisplay{
+  display: inline-flex;
+}
+
+.digital-wallets__divider {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 24px 0;
+}
+
+.digital-wallets__divider::before {
+  content: "";
+  background-color: #d5d9dc;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.digital-wallets__divider::after {
+  content: attr(data-content);
+  position: relative;
+  background-color: #fff;
+  padding: 0 13px;
+  font-size: 13px;
+  font-weight: 500;
+  bottom: 7px;
+}
+
+.fillButton{
+  width: 100%;
+}
