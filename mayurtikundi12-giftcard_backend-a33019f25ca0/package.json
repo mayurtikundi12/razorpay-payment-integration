@@ -27,7 +27,7 @@
     "joi-date-extensions": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "log4js": "^4.5.1",
-    "mongoose": "^5.6.13",
+    "mongoose": "^5.7.5",
     "multer": "^1.4.2",
     "multer-s3": "^2.9.0",
     "nodemailer": "^4.7.0",
