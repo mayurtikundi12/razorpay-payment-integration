@@ -25,7 +25,7 @@
     "ipapi.co": "^0.2.3",
     "joi": "^14.3.1",
     "joi-date-extensions": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "log4js": "^4.5.1",
     "mongoose": "^5.6.13",
     "multer": "^1.4.2",
